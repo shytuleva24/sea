@@ -1,0 +1,77 @@
+header.container-fluid.bacground
+    .container
+        section.row.about-company
+            .col-3
+                h3 про нашу компанію
+                i Наша компанія пропонує ряд цікавих - розважальних послуг, які принесуть вам ряд вражень!
+                .button 
+                    a.orange(href="#") детальніше 
+                p.attention * - зверніть увагу, зміна ціни може залежати від курсу долара.
+            //- <svg xmlns="http://www.w3.org/2000/svg" height="62" viewBox="0 0 24 24" width="68" fill="#ffb700"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8c1.3 1.3 3 2.1 5.1 2.1V9c-1.5 0-2.7-.6-3.6-1.5l-1.9-1.9c-.5-.4-1-.6-1.6-.6s-1.1.2-1.4.6L7.8 8.4c-.4.4-.6.9-.6 1.4 0 .6.2 1.1.6 1.4L11 14v5h2v-6.2l-2.2-2.3zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>            
+            .col-9
+                .row   
+                    .col-4.travel
+                        +travelPlan (travelPlans.bikeTour)
+                    .col-4.travel
+                        +travelPlan (travelPlans.islands)
+                    .col-4.travel
+                        +travelPlan (travelPlans.romantic)
+            a.text-center.all-plans(href="#") дивитись усі плани
+        section.row 
+            .col-4
+                picture 
+                    source(srcset="img/island.webp" tipe="image/webp")
+                    img(src="img/island.png" alt="Подорож до острова, незабутне враження")
+            .col-8
+                h3 Дивовижний безлюдний острів, який зводить людей з розуму
+                .row 
+                    .col-8.island
+                        p.island-descr Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                        .flex.flex-row    
+                            .button 
+                                a.orange(href="#") замовити тур
+                            .button 
+                                a.orange(href="#") детальніше
+                    .col-4
+                        a.price-island(href="#")
+                            p.price.text-center 575 грн./день 
+                            p.text-center.discr В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+section.container-fluid.surfingBg
+    .container
+        .row
+            .col-6.surfing
+                h2 СПІЙМАЙ ХВИЛЮ 
+                    span ЖИВИ ЯСКРАВО!
+                p Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                .button 
+                    a.orange(href="#") детальніше
+            .col-6.review
+                span
+                p 
+                    i Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                p 
+                    b Олег Набережний
+                p клієнт
+section.container-fluid.bacground
+    .container
+            .row
+                h3.text-center Спеціальні пропозиції тижня
+                i.text-center Гарячі праозиції, по-швидше обирай і поїхали!
+                .col-3
+                    +specialProposals (specialProposals.romantic)
+                .col-3
+                    +specialProposals (specialProposals.bikeTour)
+                .col-3
+                    +specialProposals (specialProposals.islands)
+                .col-3
+                    +specialProposals (specialProposals.surfing)
+            section.row 
+                .col-3
+                    h3 додаткова інформація
+                .col-3
+                    +additionalInformation (additionalInformation.workSchedule)
+                .col-3
+                    +additionalInformation (additionalInformation.nutritionInformation)
+                .col-3
+                    h4 задати питання
+                    p Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
