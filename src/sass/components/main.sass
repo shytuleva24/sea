@@ -3,86 +3,99 @@
     
 .about-company
     i
-        display: inline-block
-        padding: 20px 0
+        padding: 20px 0 30px
     .attention
         max-width: 217px
         padding-top: 20px
         font-size: 13px
-        line-height: 19px
         color: #bbbbbb
+.travel-plan
+        a
+        padding: 21px
+        &:hover
+            background-color: #fff
+            filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
 .travel
-    margin-bottom: 40px
     padding: 0 15px
-    transition: all .5s ease
-
-    a
-        // max-width: 215px
-        transition: all .5s ease
-    &:hover
-        background-color: #fff
-        filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
+    +media(992)
+        margin-bottom: 40px
     img
         padding: 25px
     .title-card
         font-size: 18px
-        line-height: 26px
         color: #333333
     .price
         font-size: 24px
-        line-height: 44px
         color: #0099ff
     .card-descr
         font-size: 13px
-        line-height: 19px
         color: #999999
 .all-plans
-    display: inline-block
     font-size: 12px
     letter-spacing: 0px
     color: #0099ff
-    text-transform: uppercase
     &:hover
         color: #ffb700
-
+    &::after,
+    &::before
+        content: ""
+        position: absolute 
+        top: 50%
+        right: -15px
+        transform: translate(-50%, -50%)
+        border-color: #0099ff
+        &:hover
+            border-color: #ffb700
+    &::before
+        width: 13px
+        height: 13px
+        right: -26px
+        border: 1px solid 
+        border-radius: 50%
+    &::after
+        width: 4px
+        height: 4px
+        top: 45%
+        border-bottom: 1px solid 
+        border-right: 1px solid 
+        transform: rotate(-45deg)
 .island-descr
-    line-height: 27px
     color: #333333
-    font-style: italic
-    padding: 26px 0 38px
+    padding: 10px 0
+    +media(1400)
+        padding: 26px 0 38px
 .island
     .button
         padding-right: 10px
 
 .price-island
-    display: inline-block
     background-color: #edf1f4
-    padding: 40px 30px
-    transition: all .5s ease
+    padding: 20px 10px
+    +media(1400)
+        padding: 40px 30px
     &:hover
         background-color: #fff
         filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
     .price
         font-size: 24px
-        line-height: 44px
         color: #0099ff
     .discr
         font-size: 13px
-        line-height: 20px
         color: #999999
 .surfingBg
     background: url(../img/surfing.png) no-repeat
     background-size: cover
     background-position: center
     color: #ffffff
-
 .surfing
     h2
         font-size: 56px
         letter-spacing: 2px
-        line-height: 66px
     span
         color: #0099ff
     p 
         padding: 31px 0
         max-width: 444px
+.buttons
+    .button
+        margin-bottom: 10px

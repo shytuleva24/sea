@@ -3,17 +3,3 @@ $bgcColor: #f5f8fa
 =media ($size)
     @media screen and (min-width: #{$size}px)
         @content
-
-=button ($color)
-    display: inline-block
-    text-transform: uppercase
-    font-size: 16px
-    padding: 17rem 39rem
-    border-radius: 25rem
-    transition: all .3s linear
-    @if $color == "orange"
-        margin-bottom: 25rem
-        background-color: transparent
-        color: $mainColor
-        border: 1px solid $mainColor
-

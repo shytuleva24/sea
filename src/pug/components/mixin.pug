@@ -88,18 +88,18 @@
 
 mixin menu (items, myclass)
     for item in items 
-        a.nav-link.link.p-3(href=item.url) #{item.name}
+        a.nav-link.link.p-3.text-uppercase(href=item.url) #{item.name}
 
 mixin travelPlan (item)
     figure.travel-plan
         figcaption
-            a.mx-auto.flex(href=item.href)
+            a.mx-auto.d-flex.flex-column.align-items-center(href=item.href)
                 picture.mx-auto
                     source(srcset=item.src + ".webp", tipe="image/webp")
                     img.mx-auto(src=item.src + ".png", alt=item.alt)
-                p.title-card #{item.titleCard}
+                p.title-card.text-center #{item.titleCard}
                 p.price #{item.price}
-                p.card-descr #{item.description}
+                p.card-descr.lh-base.text-center.text-md-start #{item.description}
 
 mixin specialProposals (item)
     figure
@@ -108,16 +108,16 @@ mixin specialProposals (item)
                 source(srcset=item.src + ".webp", tipe="image/webp")
                 img(src=item.src + ".png", alt=item.alt)
             p.title-card #{item.titleCard}
-            p.card-descr #{item.description}
+            p.card-descr.lh-base #{item.description}
             p.price #{item.price}
             .button
-                a.orange(href=item.href) замовити
+                a.orange.text-uppercase(href=item.href) замовити
 
 mixin additionalInformation (item)
     figure
         figcaption
             p.title-card #{item.titleCard}
             p.sizeFile #{item.sizeFile}
-            p.card-descr #{item.description}
+            p.card-descr.lh-base #{item.description}
             .button 
-                a.orange(href=item.href) скачати
+                a.orange.text-uppercase(href=item.href) скачати

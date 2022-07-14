@@ -1,38 +1,16 @@
 .header
-    background: url(../img/mainBgc.png) no-repeat
+    background: url(../img/mainBgc.png) no-repeat center
     background-size: cover
-    position: relative
-    background-position: center
     background-color: $bgcColor
 .navbar-nav
     .link
         letter-spacing: 1px
         color: #fff
-        text-transform: uppercase
-        transition: all .3s linear
         &:hover
             color: #ffb700
 .title-page
     padding: 200px 0 482px
-    color: #ffffff
-    position: relative
-    h2
-        font-size: 30px
-        letter-spacing: 1px
-        line-height: 58px
-        text-transform: uppercase
-        +media(372)
-            font-size: 35px
-            line-height: 73px
-        +media(506)
-            font-size: 49px
-        +media(600)
-            font-size: 56px
-        +media(800)
-            font-size: 72px
-            line-height: 110px
     i
-        display: inline-block
         padding-bottom: 30px
         font-size: 12px
         max-width: 560px
@@ -62,35 +40,33 @@
         z-index: 0
         +media(800)
             top: 43%
-.button
-    transition: all .3s linear
 a.main-btn
     &:hover
         background-color: rgba(245,248,250,0.5)
 .choise-plan
     max-width: 326px
-    position: absolute
-    bottom: 0
     left: 50%
+    bottom: 0
     color: #333333
     transform: translateX(-50%)
+    z-index: 1
     svg
-        transition: all .5s linear
         &:hover
             transform: scale(1.5)
 .title-choise
-    text-transform: uppercase
     font-size: 17px
     letter-spacing: 1px
     +media(500)
         font-size: 28px
     +media(650)
         font-size: 36px
-        line-height: 44px
 .description-choise
     font-size: 14px
-    font-style: italic
     +media(600)
         font-size: 16px
-        line-height: 24px
-
+.gradient
+    position: absolute
+    bottom: 0
+    height: 10%
+    z-index: 0
+    background: linear-gradient(0deg, rgba(245,248,250,1) 0%, rgba(245,248,250,0) 100%)
