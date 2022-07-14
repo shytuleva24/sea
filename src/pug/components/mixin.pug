@@ -102,22 +102,23 @@ mixin travelPlan (item)
                 p.card-descr.lh-base.text-center.text-md-start #{item.description}
 
 mixin specialProposals (item)
-    figure
+    figure.card-proposals
         figcaption
             picture 
                 source(srcset=item.src + ".webp", tipe="image/webp")
                 img(src=item.src + ".png", alt=item.alt)
-            p.title-card #{item.titleCard}
-            p.card-descr.lh-base #{item.description}
-            p.price #{item.price}
-            .button
-                a.orange.text-uppercase(href=item.href) замовити
+            .content-card
+                p.title-card #{item.titleCard}
+                p.card-descr.lh-base #{item.description}
+                p.price.d-flex.justify-content-between #{item.price}
+                    a.text-uppercase.card-btn(href=item.href) замовити
 
 mixin additionalInformation (item)
     figure
-        figcaption
-            p.title-card #{item.titleCard}
-            p.sizeFile #{item.sizeFile}
-            p.card-descr.lh-base #{item.description}
-            .button 
-                a.orange.text-uppercase(href=item.href) скачати
+        figcaption 
+            .add-info
+                p.title-card.text-white.position-relative #{item.titleCard}
+                p.sizeFile #{item.sizeFile}
+                p.card-descr.lh-base.text-white #{item.description}
+                .button 
+                    a.text-uppercase.position-relative.d-inline-block.align-middle(href=item.href) скачати

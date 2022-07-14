@@ -61,22 +61,27 @@ section.container-fluid.bacground
     .container
             .row.g-5
                 h3.text-center.text-uppercase Спеціальні пропозиції тижня
-                i.text-center Гарячі праозиції, по-швидше обирай і поїхали!
-                .col-3
+                i.text-center.mt-0 Гарячі праозиції, по-швидше обирай і поїхали!
+                .col-12.col-sm-6.col-lg-3
                     +specialProposals (specialProposals.romantic)
-                .col-3
+                .col-12.col-sm-6.col-lg-3
                     +specialProposals (specialProposals.bikeTour)
-                .col-3
+                .col-12.col-sm-6.col-lg-3
                     +specialProposals (specialProposals.islands)
-                .col-3
+                .col-12.col-sm-6.col-lg-3
                     +specialProposals (specialProposals.surfing)
-            section.row.g-5
+            section.row.g-5.additional-info
                 .col-3
                     h3.text-uppercase додаткова інформація
-                .col-3
+                .col-3.workSchedule
                     +additionalInformation (additionalInformation.workSchedule)
-                .col-3
+                .col-3.nutritionInformation
                     +additionalInformation (additionalInformation.nutritionInformation)
-                .col-3
-                    h4 задати питання
-                    p Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                .col-3.consultation.position-relative.d-flex.justify-content-center.flex-column.align-items-center
+                    h4.question.m-0 задати питання
+                    p.text-cener.m-0 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
+                    a(href="tel:+380505698511") +38 (050) 56 98 511
+                    h4.name-consult.m-0 Анна Миколаївна
+                    p консультант
+                    .photo-consult
+                        img.rounded-circle(src="img/admin.png", alt="")
