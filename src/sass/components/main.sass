@@ -64,6 +64,7 @@
     padding: 10px 0
     +media(1400)
         padding: 26px 0 38px
+        line-height: 29px
 .island
     .button
         padding-right: 10px
@@ -88,14 +89,64 @@
     background-position: center
     color: #ffffff
 .surfing
+    padding-bottom: 30px
+    +media(1200)
+        padding-bottom: 0
     h2
-        font-size: 56px
+        font-size: 29px
         letter-spacing: 2px
+        +media(600)
+            font-size: 56px
     span
         color: #0099ff
     p 
         padding: 31px 0
-        max-width: 444px
 .buttons
     .button
         margin-bottom: 10px
+        +media(992)
+            margin-bottom: 0
+        a
+            width: 193px
+
+.photo-review
+    width: 86px
+    opacity: 0.8
+    &:hover
+        transform: scale(1.2)
+        opacity: 1
+.review
+    &::before,
+    &::after
+        position: absolute
+        height: 78%
+        width: 200px
+        top: 15px
+        opacity: 0.2
+        border: 4px solid #fff
+        +media(600)
+            content: ""
+    &::before
+        right: -35px
+        border-left: none
+    &::after
+        left: -35px
+        border-right: none
+    i
+        max-width: 500px
+        padding: 16px 0
+    p
+        padding-bottom: 5px
+        color: #999999
+    span
+        padding: 25px
+        &::before
+            content: ""
+            position: absolute
+            width: 42px
+            height: 38px
+            top: 0
+            left: 50%
+            background: url(../img/quote.svg) no-repeat
+            transform: translateX(-50%)
+
