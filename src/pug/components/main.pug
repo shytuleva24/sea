@@ -7,11 +7,11 @@ header.container-fluid.bacground
                 .button 
                     a.orange.text-uppercase(href="#") детальніше 
                 p.attention.lh-base.text-center.text-xl-start * - зверніть увагу, зміна ціни може залежати від курсу долара.
-            //- <svg xmlns="http://www.w3.org/2000/svg" height="62" viewBox="0 0 24 24" width="68" fill="#ffb700"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8c1.3 1.3 3 2.1 5.1 2.1V9c-1.5 0-2.7-.6-3.6-1.5l-1.9-1.9c-.5-.4-1-.6-1.6-.6s-1.1.2-1.4.6L7.8 8.4c-.4.4-.6.9-.6 1.4 0 .6.2 1.1.6 1.4L11 14v5h2v-6.2l-2.2-2.3zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>            
             .col-xl-9
                 .row.g-2
                     .col-12.col-md-4.travel
                         +travelPlan (travelPlans.bikeTour)
+                        //- <svg xmlns="http://www.w3.org/2000/svg" height="62" viewBox="0 0 24 24" width="68" fill="#ffb700"><path d="M0 0h24v24H0z" fill="none"/><path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8c1.3 1.3 3 2.1 5.1 2.1V9c-1.5 0-2.7-.6-3.6-1.5l-1.9-1.9c-.5-.4-1-.6-1.6-.6s-1.1.2-1.4.6L7.8 8.4c-.4.4-.6.9-.6 1.4 0 .6.2 1.1.6 1.4L11 14v5h2v-6.2l-2.2-2.3zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>            
                     .col-12.col-md-4.travel
                         +travelPlan (travelPlans.islands)
                     .col-12.col-md-4.travel
@@ -70,17 +70,17 @@ section.container-fluid.bacground
                     +specialProposals (specialProposals.islands)
                 .col-12.col-sm-6.col-lg-3
                     +specialProposals (specialProposals.surfing)
-            section.row.g-5.additional-info
-                .col-3
-                    h3.text-uppercase додаткова інформація
-                .col-3.workSchedule
+            section.row.g-5.additional-info.d-flex.flex-column.flex-sm-row.flex-xl-nowrap
+                .col-12.col-md-6.col-xl-3.d-flex.justify-content-center.align-items-center.align-self-xl-start
+                    h3.text-uppercase.text-center.text-lg-start.w-sm-50.w-xl-50.w-xxl-100 додаткова інформація
+                .col-12.col-sm-6.col-xl-3.workSchedule.order-md-2.order-xl-0
                     +additionalInformation (additionalInformation.workSchedule)
-                .col-3.nutritionInformation
+                .col-12.col-sm-6.col-xl-3.nutritionInformation.order-md-2.order-xl-0
                     +additionalInformation (additionalInformation.nutritionInformation)
-                .col-3.consultation.position-relative.d-flex.justify-content-center.flex-column.align-items-center
+                .col-12.col-md-6.col-xl-3.consultation.position-relative.d-flex.justify-content-center.flex-column.align-items-center.mx-auto
                     h4.question.m-0 задати питання
                     p.text-cener.m-0 Скажіть доброго дня нашому консультанту, і ми з радістю відповімо на Ваші запитання
-                    a(href="tel:+380505698511") +38 (050) 56 98 511
+                    a.tel.position-relative(href="tel:+380505698511") +38 (050) 56 98 511
                     h4.name-consult.m-0 Анна Миколаївна
                     p консультант
                     .photo-consult

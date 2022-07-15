@@ -207,7 +207,7 @@
         font-size: 12px
         color: #ffb700
         &:hover
-            background-color: rgba(255,255,255,0.3)
+            background-color: rgba(0,0,0,0.3)
         &::before
             content: ""
             position: absolute
@@ -220,6 +220,7 @@
 .consultation
     margin-top: 24px
     font-size: 18px
+    width: 320px
     &::before,
     &::after
         position: absolute
@@ -246,9 +247,26 @@
         line-height: 16px
         color: #999999
     a
-        padding: 20px 0
+        padding: 22px 
+        padding-right: 0
         line-height: 26px
         color: #0099ff
 .question
     padding-bottom: 27px
+.tel
+    &::before
+        content: ""
+        position: absolute
+        width: 16px
+        height: 17px
+        top: 26px
+        left: 0
+        background: url(../img/call.svg) no-repeat center
+.photo-consult
+    width: 86px
+    opacity: 0.8
+    &:hover
+        transform: scale(1.2)
+        opacity: 1
+
     
