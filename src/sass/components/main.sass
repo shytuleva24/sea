@@ -39,10 +39,12 @@
     .card-descr
         font-size: 13px
         color: #999999
-.all-plans
+.arrow-right
     font-size: 12px
+    vertical-align: middle
     letter-spacing: 0px
     color: #0099ff
+    padding-right: 25px
     &:hover
         color: #ffb700
     &::after,
@@ -50,21 +52,21 @@
         content: ""
         position: absolute 
         top: 50%
-        right: -15px
+        right: 11px
         transform: translate(-50%, -50%)
         border-color: #0099ff
         &:hover
             border-color: #ffb700
     &::before
-        width: 13px
-        height: 13px
-        right: -26px
+        width: 12px
+        height: 12px
+        right: 0
         border: 1px solid 
         border-radius: 50%
     &::after
         width: 4px
         height: 4px
-        top: 45%
+        top: 40%
         border-bottom: 1px solid 
         border-right: 1px solid 
         transform: rotate(-45deg)
@@ -184,8 +186,41 @@
         font-size: 13px
         letter-spacing: 1px
         color: #ffb700
+        transition: all .3s linear
         &:hover
-            font-size: 15px
+            color: #0099ff
+            text-decoration: underline
+    .arrow-right::after
+        top: 45.5%
+.popular
+    &::before
+        content: ""
+        position: absolute
+        background: url(../img/popular.svg) no-repeat center
+        width: 60px
+        height: 60px
+        top: 0
+        left: 0
+        opacity: 1
+        z-index: 2
+        transition: all .3s linear
+        +media(1200)
+            opacity: 0
+    &:hover::before
+        opacity: 1
+.bike-tour
+    .img
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            background: url(../img/bike-tour.svg) no-repeat center
+            background-color: #0099ff
+            width: 60px
+            height: 100%
+            top: 0
+            left: 0
+            z-index: 1
 .workSchedule
     .add-info
         background: url(../img/info1.png) no-repeat center
@@ -271,6 +306,8 @@
 .question
     padding-bottom: 27px
 .tel
+    &:hover
+        text-decoration: underline
     &::before
         content: ""
         position: absolute
@@ -278,12 +315,24 @@
         height: 17px
         top: 26px
         left: 0
+        transform: rotate(5deg)
         background: url(../img/call.svg) no-repeat center
+    &:hover::before
+        animation: call 1.5s infinite linear        
 .photo-consult
     width: 86px
     opacity: 0.8
     &:hover
         transform: scale(1.2)
         opacity: 1
-
-    
+@keyframes call  
+    0% 
+        transform: rotate(0deg)
+    10% 
+        transform: rotate(25deg)
+    11%
+        transform: rotate(0)
+    90%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(25deg)

@@ -1,12 +1,12 @@
 -
     let menu = [
         {name: "Гoловна ", url: "#"},
-        {name: "Послуги", url: "#"},
-        {name: "Про компанію", url: "#"},
-        {name: "Акції", url: "#"},
-        {name: "Партнери", url: "#"},
-        {name: "Відгуки", url: "#"},
-        {name: "Контакти", url: "#"}
+        {name: "Послуги", url: "#about-company"},
+        {name: "Про компанію", url: "#about-company"},
+        {name: "Акції", url: "#proposals"},
+        {name: "Партнери", url: "#surfingBg"},
+        {name: "Відгуки", url: "#surfingBg"},
+        {name: "Контакти", url: "#additional-info"}
     ]
 -
     let travelPlans = {
@@ -93,25 +93,26 @@ mixin menu (items, myclass)
 mixin travelPlan (item)
     figure.travel-plan
         figcaption
-            a.mx-auto.d-flex.flex-column.align-items-center(href=item.href)
+            a.mx-auto.d-flex.flex-column.align-items-center.popular.position-relative(href=item.href)
                 picture.mx-auto
                     source(srcset=item.src + ".webp", tipe="image/webp")
-                    img.mx-auto(src=item.src + ".svg", alt=item.alt)
+                    img.mx-auto.position-relative(src=item.src + ".svg", alt=item.alt)
                 p.title-card.text-center #{item.titleCard}
                 p.price #{item.price}
                 p.card-descr.lh-base.text-center.text-md-start #{item.description}
 
 mixin specialProposals (item)
-    figure.card-proposals
+    figure.card-proposals.position-relative.popular
         figcaption
-            picture 
-                source(srcset=item.src + ".webp", tipe="image/webp")
-                img(src=item.src + ".png", alt=item.alt)
+            .img.position-relative
+                picture 
+                    source(srcset=item.src + ".webp", tipe="image/webp")
+                    img.position-relative(src=item.src + ".png", alt=item.alt)
             .content-card
                 p.title-card #{item.titleCard}
                 p.card-descr.lh-base #{item.description}
                 p.price.d-flex.justify-content-between #{item.price}
-                    a.text-uppercase.card-btn(href=item.href) замовити
+                    a.text-uppercase.card-btn.arrow-right.position-relative(href=item.href) замовити
 
 mixin additionalInformation (item)
     figure

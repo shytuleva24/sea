@@ -1,6 +1,6 @@
 header.container-fluid.bacground
     .container
-        section.row.about-company
+        section.row.about-company#about-company
             .col-xl-3.d-flex.flex-column.align-items-center.align-items-xl-start
                 h3.text-uppercase.text-center.text-xl-start про нашу компанію
                 i.d-inline-block.text-center.text-xl-start Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
@@ -19,7 +19,7 @@ header.container-fluid.bacground
             .row 
                 .col-xl-5.col
                 .col-xl-2.col-12.text-center
-                    a.text-uppercase.text-center.all-plans.position-relative.d-inline-block(href="#") дивитись усі плани 
+                    a.text-uppercase.all-plans.position-relative.d-inline-block.arrow-right(href="#") дивитись усі плани 
                 .col-xl-5.col
         section.row.g-3 
             .col-12.col-lg-4
@@ -40,7 +40,7 @@ header.container-fluid.bacground
                         a.price-island.d-block(href="#")
                             p.price.text-center.lh-base 575 грн./день 
                             p.text-center.discr.lh-base В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
-section.container-fluid.surfingBg
+section.container-fluid.surfingBg#surfingBg
     .container
         .row.g-5
             .col-12.col-xl-6.text-center.text-xl-start.surfing
@@ -57,20 +57,20 @@ section.container-fluid.surfingBg
                     p клієнт
                     .photo-review
                         img.rounded-circle(src="img/photoReview.png", alt="")
-section.container-fluid.bacground
+section.container-fluid.bacground#proposals
     .container
             .row.g-5
                 h3.text-center.text-uppercase Спеціальні пропозиції тижня
                 i.text-center.mt-0 Гарячі праозиції, по-швидше обирай і поїхали!
                 .col-12.col-md-6.col-xl-3
                     +specialProposals (specialProposals.romantic)
-                .col-12.col-md-6.col-xl-3
+                .col-12.col-md-6.col-xl-3.bike-tour
                     +specialProposals (specialProposals.bikeTour)
                 .col-12.col-md-6.col-xl-3
                     +specialProposals (specialProposals.islands)
                 .col-12.col-md-6.col-xl-3
                     +specialProposals (specialProposals.surfing)
-            section.row.g-5.additional-info.d-flex.flex-column.flex-sm-row.flex-xl-nowrap
+            section.row.g-5.additional-info.d-flex.flex-column.flex-sm-row.flex-xl-nowrap#additional-info
                 .col-12.col-md-6.col-lg-12.col-xl-3.d-flex.justify-content-center.align-items-center.align-self-xl-start
                     h3.text-uppercase.text-center.text-lg-start.w-sm-50.w-xxl-100 додаткова інформація
                 .col-12.col-sm-6.col-lg-4.col-xl-3.workSchedule.order-md-2.order-xl-0
@@ -85,3 +85,9 @@ section.container-fluid.bacground
                     p консультант
                     .photo-consult
                         img.rounded-circle(src="img/admin.png", alt="")
+//- <svg width="60" height="60" viewbox="0 0 100 100">
+//-     <defs id="star">
+//-         <polygon points="0 0, 60 0, 0 60" fill="#26cb15"/>
+//-         <svg x="5" y="5" height="24" viewBox="0 0 24 24" width="24" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path fill="#fff" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+//-     </defs>
+//- </svg>
