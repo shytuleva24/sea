@@ -39,8 +39,6 @@
     .card-descr
         font-size: 13px
         color: $colorTextGray
-.all-plans
-    padding: 5px 0
 .all-plans,
 .arrow-right
     font-size: 12px 
@@ -59,6 +57,7 @@
         right: 10px
         transform: translate(-50%,-50%)
         border-color: $mainBlueColor
+        box-sizing: border-box
         &:hover
             border-color: $mainOrangeColor
     &::before
@@ -74,6 +73,9 @@
         border-bottom: 1px solid
         border-right: 1px solid
         transform: rotate(-45deg)
+.all-plans
+    &::after
+        top: 7px
 .island-descr
     color: $colorTitle
     padding: 10px 0
@@ -181,7 +183,8 @@
         font-size: 13px
         line-height: 19px
         color: $colorTextGray
-        min-height: 60px
+        +media(768)
+            min-height: 60px
         +media(1200)
             min-height: 70px
 
@@ -322,7 +325,6 @@
         left: 0
         transform: rotate(5deg)
         background: url(../img/call.svg) no-repeat center
-    &:hover::before
         animation: call 1.5s infinite linear        
 .photo-consult
     width: 86px
