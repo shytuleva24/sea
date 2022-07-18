@@ -39,36 +39,40 @@
     .card-descr
         font-size: 13px
         color: #999999
+.all-plans
+    padding: 5px 0
+.all-plans,
 .arrow-right
-    font-size: 12px
+    font-size: 12px 
     vertical-align: middle
     letter-spacing: 0px
     color: #0099ff
-    padding-right: 25px
+    padding-right: 20px
     &:hover
         color: #ffb700
+.arrow-right
     &::after,
     &::before
         content: ""
-        position: absolute 
+        position: absolute
         top: 50%
-        right: 11px
-        transform: translate(-50%, -50%)
-        border-color: #0099ff
+        right: 10px
+        transform: translate(-50%,-50%)
+        border-color: #09f
         &:hover
             border-color: #ffb700
     &::before
-        width: 12px
-        height: 12px
+        width: 11px
+        height: 11px
         right: 0
-        border: 1px solid 
+        border: 1px solid
         border-radius: 50%
     &::after
         width: 4px
         height: 4px
-        top: 40%
-        border-bottom: 1px solid 
-        border-right: 1px solid 
+        top: 45.3%
+        border-bottom: 1px solid
+        border-right: 1px solid
         transform: rotate(-45deg)
 .island-descr
     color: #333333
@@ -190,8 +194,6 @@
         &:hover
             color: #0099ff
             text-decoration: underline
-    .arrow-right::after
-        top: 45.5%
 .popular
     &::before
         content: ""
@@ -336,3 +338,5 @@
         transform: rotate(0deg)
     100%
         transform: rotate(25deg)
+
+        text-decoration: underline
