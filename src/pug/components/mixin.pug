@@ -96,7 +96,7 @@ mixin travelPlan (item)
             a.mx-auto.d-flex.flex-column.align-items-center.popular.position-relative(href=item.href)
                 picture.mx-auto
                     source(srcset=item.src + ".webp", tipe="image/webp")
-                    img.mx-auto.position-relative(src=item.src + ".svg", alt=item.alt)
+                    img.mx-auto.position-relative(src=item.src + ".png", alt=item.alt)
                 p.title-card.text-center #{item.titleCard}
                 p.price #{item.price}
                 p.card-descr.lh-base.text-center.text-md-start #{item.description}
@@ -107,7 +107,7 @@ mixin specialProposals (item)
             .img.position-relative
                 picture 
                     source(srcset=item.src + ".webp", tipe="image/webp")
-                    img.position-relative(src=item.src + ".png", alt=item.alt)
+                    img.position-relative(src=item.src + ".jpg", alt=item.alt)
             .content-card
                 p.title-card #{item.titleCard}
                 p.card-descr.lh-base #{item.description}
